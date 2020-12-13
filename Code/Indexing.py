@@ -10,7 +10,7 @@ if not es.indices.exists(index="asr_iran"):
     print("index Doesnt exists")
     print("index Created")
 else:
-    es.indices.delete("asr_iran")
+    es.indices.delete("asr_iran ")
     print("index Deleted")
 
 es.indices.create(index="asr_iran", body={"mappings": {
@@ -27,7 +27,7 @@ es.indices.create(index="asr_iran", body={"mappings": {
 }})
 
 
-docs = utility.convertToArrayDictionary(Path("Data/news.json"))
+docs = utility.convertToArrayDictionary(Path("../Data/news.json"))
 
 activity = [{
  
