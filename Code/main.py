@@ -14,6 +14,6 @@ p1 = "فرهنگی"
 p2 = "سیاسی"
 p3 = "اقتصادی"
 
-res = ws(p1, p2, p3, "asr_iran")
+ws(p1, p2, p3, "asr_iran")
 
 print(" ")
