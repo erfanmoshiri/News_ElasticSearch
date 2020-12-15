@@ -13,7 +13,6 @@ for i in range(5):
     #set score for 3333 search
     list.append(w)
     list.sort()
-    list.reverse()
 
                                      #we use evolutionary algorithms for finding best weights
                                      #to ways to generate new weights, that is decided randomly
@@ -24,6 +23,8 @@ for n in range(1000):
 
     choice = random.randint(0, 1)
     w1 = Weight()
+    l1 = []
+
 
     if choice == 0: 
         alpha = random.random()
@@ -39,19 +40,22 @@ for n in range(1000):
         c1 = random.randint(0, 3)
         c2 = random.randint(0, 3)
 
-        l1 = []
         for i in range(0, alpha):
             w1.weights[i] = list[c1].weights[i]
         for i in range(alpha, 4):
             w1.weights[i] = list[c2].weights[i]
 
+    l1 = w1.weights
+
 
         #here we call ealsticSearch and calculate score, forexample imagine score is 9
+        #w1.score = f(l1[0], l1[1], l1[2], l1[3])
+        #w1.score = f(l1)
         
-    w1.score = 4 + 9 * random.random()
+    w1.score = 4 + 9 * random.random()  #this line should be commented
+
     list.append(w1)
     list.sort()
-    list.reverse()
     list.pop()
 
     print(n)
