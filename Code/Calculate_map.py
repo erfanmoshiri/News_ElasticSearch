@@ -6,7 +6,7 @@ from trectools import misc, TrecRun, TrecQrel, procedures,TrecEval
 import gzip
 import struct
 
-from Code.SearchQuery import search_query
+from SearchQuery import search_query
 
 
 class calculate_map():

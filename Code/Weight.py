@@ -1,7 +1,8 @@
 class Weight:
 
-    weights = [0,0,0,0]
-    score = 0
+    def __init__(self, weights, score):
+        self.weights = weights
+        self.score = score
 
 
 
