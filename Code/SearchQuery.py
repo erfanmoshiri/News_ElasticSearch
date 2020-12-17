@@ -8,7 +8,6 @@ class search_query():
     def search_on_category(self, w1, w2, w3, w4):
 
         query = "(" + "سیاسی" + ")^{} (".format(w1) + "اقتصادی" + ")^{} (".format(w2) + "اجتماعی" + ")^{} (".format(w3)+ "بین الملل" + ")^{}".format(w4)
-        print(query)
 
         search_param = {
             "query": {
@@ -23,7 +22,6 @@ class search_query():
         return response
     def search_on_body(self, w1, w2, w3, w4):
         query = "(" + "سیاسی" + ")^{} (".format(w1) + "اقتصادی" + ")^{} (".format(w2) + "اجتماعی" + ")^{} (".format(w3)+ "بین الملل" + ")^{}".format(w4)
-        print(query)
         search_param = {
             "query": {
                 "query_string": {
