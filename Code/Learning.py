@@ -1,8 +1,10 @@
 import random
+
 from Weight import Weight
-
-
+from Code.Calculate_map import calculate_map
 initWeights = [3, 3, 3, 3]
+calculator = calculate_map()
+
 
 list = []
 
@@ -48,7 +50,7 @@ for n in range(1000):
 
         #here we call ealsticSearch and calculate score, forexample imagine score is 9
         
-    w1.score = 4 + 9 * random.random()
+    w1.score = calculator.cal_map(w1.weights[0],w1.weights[1],w1.weights[2],w1.weights[3])
     list.append(w1)
     list.sort()
     list.reverse()
