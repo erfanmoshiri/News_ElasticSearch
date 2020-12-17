@@ -1,8 +1,10 @@
 import random
+
 from Weight import Weight
-
-
+from Code.Calculate_map import calculate_map
 initWeights = [3, 3, 3, 3]
+calculator = calculate_map()
+
 
 list = []
 
@@ -52,8 +54,7 @@ for n in range(1000):
         #w1.score = f(l1[0], l1[1], l1[2], l1[3])
         #w1.score = f(l1)
         
-    w1.score = 4 + 9 * random.random()  #this line should be commented
-
+    w1.score = calculator.cal_map(w1.weights[0],w1.weights[1],w1.weights[2],w1.weights[3])
     list.append(w1)
     list.sort()
     list.pop()
