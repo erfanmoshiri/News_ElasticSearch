@@ -10,11 +10,11 @@ list = []
 
 for i in range(5):
     w = Weight()
-    w.score = 5 + 5 * random.random()
-    w.weights = initWeights
-    #set score for 3333 search
+    for v in range(4):
+        w.weights[v] = random.randint(1, 10)
+    w.score = calculator.cal_map(w.weights[0],w.weights[1],w.weights[2],w.weights[3])
     list.append(w)
-    list.sort()
+list.sort()
 
                                      #we use evolutionary algorithms for finding best weights
                                      #to ways to generate new weights, that is decided randomly
